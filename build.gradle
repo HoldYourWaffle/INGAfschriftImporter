@@ -1,0 +1,14 @@
+apply plugin: 'java'
+sourceCompatibility = targetCompatibility = 1.8
+
+version = 1.0
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile 'me.tongfei:progressbar:0.7.1'
+	compile 'mysql:mysql-connector-java:8.0.11'
+	compile 'org.apache.commons:commons-csv:1.6'
+}
