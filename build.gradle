@@ -1,7 +1,9 @@
 apply plugin: 'java'
-sourceCompatibility = targetCompatibility = 1.8
+apply plugin: 'application'
 
 version = 1.0
+mainClassName = 'info.zthings.bankimport.Parser'
+sourceCompatibility = targetCompatibility = 1.8
 
 repositories {
 	mavenCentral()
@@ -11,4 +13,10 @@ dependencies {
 	compile 'me.tongfei:progressbar:0.7.1'
 	compile 'mysql:mysql-connector-java:8.0.11'
 	compile 'org.apache.commons:commons-csv:1.6'
+}
+
+jar {
+	manifest {
+		attributes 'Main-Class': mainClassName
+	}
 }
